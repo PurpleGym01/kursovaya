@@ -1,4 +1,6 @@
-﻿  main.cpp
+﻿  check.cpp
+  levels.cpp
+  main.cpp
 C:\Users\kubik\Downloads\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: class "std::runtime_error", не являющийся dll-интерфейсом, использован в качестве базового для dll-интерфейса class "sf::Exception"
   (компиляция исходного файла "../../main.cpp")
       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\stdexcept(100,19):
@@ -6,4 +8,5 @@ C:\Users\kubik\Downloads\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): wa
       C:\Users\kubik\Downloads\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
        см. объявление "sf::Exception"
   
+  Создание кода...
   kkk.vcxproj -> C:\Users\kubik\source\repos\kursovaya\kkk\x64\Debug\kkk.exe

@@ -1,12 +1,12 @@
-#include "levels.hpp"
+#include "zagolovok.hpp"
 
 int check_area(int x, int y) {
-	return level1.task[x][y] == 0;
+	return now.task[x][y] == 0;
 }
 
 void check_ans (int x, int y, int num) {
-	if (level1.ans[x][y] == num) {
-		level1.task[x][y] = num;
+	if (now.ans[x][y] == num) {
+		now.task[x][y] = num;
 		//запускаем перерисовку
 	}
 }
@@ -14,7 +14,7 @@ void check_ans (int x, int y, int num) {
 int check_end() {
 	for (int i = 0; i < 9; i++) {
 		for (int j = 0; j < 9; j++) {
-			if (level1.task[i][j] == 0)
+			if (now.task[i][j] == 0)
 				return 0;
 		}
 	}

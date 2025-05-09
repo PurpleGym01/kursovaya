@@ -1,29 +1,23 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/System.hpp>
-
-using namespace sf;
+#include "zagolovok.hpp"
 
 int main() {
-    RenderWindow window(VideoMode({ 900, 600 }), "Sudoku");
+    int selected_level = 1; // before_main_menu(); андрей напишет
+    std::vector<Level> levels = { level1, level2, level3, level4, level5 };
+    now = levels[selected_level];
 
-    window.setVerticalSyncEnabled(true);
+    sf::RenderWindow playw(sf::VideoMode({ 900, 600 }), "Sudoku");
 
-    CircleShape shape(100.f, 3);
-    shape.setPosition({100, 350});
-    shape.setFillColor(Color::Magenta);
+    while (playw.isOpen()) {
 
-    while (window.isOpen())
-    {
-        while (auto event = window.pollEvent())
+        while (const std::optional event = playw.pollEvent())
         {
-            if (event->is<Event::Closed>())
-                window.close();
+            // Close window: exit
+            if (event->is<sf::Event::Closed>())
+                playw.close();
         }
 
-        window.clear(Color::Black);
-        window.draw(shape);
-        window.display();
     }
-    return 0;
 }
